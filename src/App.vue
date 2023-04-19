@@ -4,7 +4,7 @@ import HelloWorld from "./components/HelloWorld.vue";
 
 <template>
   <div>
-    <v-card text="hola mamahuevo"></v-card>
+    <v-card text="Hi! I'm a Vuetify Card"></v-card>
     <a href="https://vitejs.dev" target="_blank">
       <img src="/vite.svg" class="logo" alt="Vite logo" />
     </a>
