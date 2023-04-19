@@ -2,9 +2,20 @@
 
 In this readme I show you the steps I have follow to config this proyect, in case you wish toknow how setup yours.
 
-If you don't feel confident yet, nevermind. Clone this repo, copy your code carefully into it and then run it.
+If you don't feel confident yet, nevermind. Clone this repo, copy your code carefully into it and then run it. In this case you only have to clone it, install dependencies and run it with this following commands:
 
-## Step 1: [Vite + Vue](https://vitejs.dev/guide/)
+```
+git clone https://github.com/borj4/vite-vuetify.git
+cd vite-vuetify
+npm install
+npm run dev
+```
+
+Was easy, didn't you?
+
+If you want to install and configure by yourself, follow the steps below:
+
+## Step 1: Install [Vite + Vue](https://vitejs.dev/guide/)
 
 First, execute this command:
 
@@ -12,7 +23,7 @@ First, execute this command:
 npm create vite@latest
 ```
 
-Terminal ask to us to install vite, then we type 'Y' (yes). At this point we choose the following configuration:
+Terminal ask to us to install Vite, then we type 'Y' (yes). At this point we choose the following configuration:
 
 - Project name --> [your proyect name]
 - Select a framework --> Vue
@@ -27,17 +38,17 @@ Terminal ask to us to install vite, then we type 'Y' (yes). At this point we cho
 
 Now we had installed our Vite + Vue proyect.
 
-## Step 2: [Vuetify](https://vuetifyjs.com/en/getting-started/installation/)
+## Step 2: Install [Vuetify](https://vuetifyjs.com/en/getting-started/installation/)
 
 Vuetify consist in a built-in component gallery. For example, we can use pre-built cards, navbars and many more.
 
-So we need to configure this in or existing Vite + Vue proyect.
-
-First, install the npm depency:
+In this step we only have to install the npm depency:
 
 ```
 npm i vite-plugin-vuetify
 ```
+
+## Step 3: Configure Vuetify in our Vite + Vue proyect
 
 Great, now we only need to apply a couple changes to configure it:
 
@@ -53,6 +64,8 @@ export default defineConfig({
   plugins: [vue(), vuetify({ autoImport: true })], // ADD
 });
 ```
+
+Now open vite.config.js in the same root directory and apply the following changes:
 
 ```javascript
 //main.js
@@ -74,7 +87,7 @@ const vuetify = createVuetify({
 createApp(App).use(vuetify).mount("#app");
 // TO THIS
 
-// AND COMMENT OLD MOUNT:
+// AND COMMENT OLD MOUNT METHOD:
 // createApp(App).mount('#app')
 ```
 
